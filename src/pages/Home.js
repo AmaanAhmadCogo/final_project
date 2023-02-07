@@ -4,6 +4,11 @@ import './Home.css';
 import { BiChevronDown } from "react-icons/bi"
 
 function Home() {
+
+    var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
+  
     return (
         <>
             {/* header    */}
@@ -57,7 +62,7 @@ function Home() {
             </div>
 
             {/* Blogs */}
-            <div style={styles.blogContent}>
+            <div style={styles.blogArea}>
 
                 {/* buttons to view by category */}
                 <div style={styles.buttonSpace}>
@@ -70,7 +75,16 @@ function Home() {
 
                 <div style={styles.blogs}>
                     <div style={styles.blogRow}>
-                        <div style={styles.blog}>1st blog</div>
+                        <div style={styles.blog}>
+                            <div style={styles.blogImageDiv}><img style={styles.blogImage} src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg"/></div>
+                            <div style={styles.blogContent}>
+                                Article Category
+                                <h6>Article Title</h6>
+                                <p>lorem hioivhjwoijvwpoijvowivjpqovjpwov</p>
+                                <p>Blogger's Name</p>
+                                <p>Publishing Date</p>
+                            </div>
+                        </div>
                         <div style={styles.blog}>2nd blog</div>
                     </div>
                     <div style={styles.blogRow}>
@@ -84,7 +98,7 @@ function Home() {
 }
 
 export default Home;
-
+  
 const styles = {
     // header ---------------------------------------------------
     header: {
@@ -187,7 +201,7 @@ const styles = {
     },
 
     // Blog buttons to view by category---------------------------------------------
-    blogContent: {
+    blogArea: {
         padding: "10px 80px",
     },
     buttonSpace: {
@@ -203,23 +217,43 @@ const styles = {
     },
 
     // Blogs --------------------------------------------------------------------
-    blogs:{
+    blogs: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+    },
+    blogRow: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+        padding: "20px 20px 20px 0"
+    },
+    blog: {
+        display: "flex",
+        justifyContent: "flex-start",
+        // alignItems:"flex-start",
+        backgroundColor: "green",
+        width: "48%",
+        height: "200px",
+    },
+    blogImageDiv: {
+        // width: "320px",
+        // height: "200px",
+    },
+    blogImage:{
+        width: "320px",
+        height: "200px",
+        objectFit:"contain"
+    },
+    blogContent:{
         display:"flex",
         flexDirection:"column",
-        justifyContent:"center",
-        alignItems:"center",
-        width:"100%",
+
     },
-    blogRow:{
-        display:"flex",
-        justifyContent:"space-between",
-        alignItems:"center",
-        width:"100%",
-        padding:"20px 20px 20px 0"
-    },
-    blog:{
-        backgroundColor:"green",
-        width:"45%",
-        height:"200px",
+    bloggerInfo:{
+
     }
 }
