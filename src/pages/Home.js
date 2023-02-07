@@ -57,7 +57,9 @@ function Home() {
             </div>
 
             {/* Blogs */}
-            <div style={styles.blogs}>
+            <div style={styles.blogContent}>
+
+                {/* buttons to view by category */}
                 <div style={styles.buttonSpace}>
                     <button style={styles.categoryBtn} className="btnP">View All</button>
                     <button style={styles.categoryBtn} className="btnP">Design</button>
@@ -65,8 +67,17 @@ function Home() {
                     <button style={styles.categoryBtn} className="btnP">Software Development</button>
                     <button style={styles.categoryBtn} className="btnP">Customer Services</button>
                 </div>
-                <div></div>
-                <div></div>
+
+                <div style={styles.blogs}>
+                    <div style={styles.blogRow}>
+                        <div style={styles.blog}>1st blog</div>
+                        <div style={styles.blog}>2nd blog</div>
+                    </div>
+                    <div style={styles.blogRow}>
+                        <div style={styles.blog}>3rd blog</div>
+                        <div style={styles.blog}>4th blog</div>
+                    </div>
+                </div>
             </div>
         </>
     )
@@ -145,7 +156,7 @@ const styles = {
         width: "100%",
         color: "#546278",
         // backgroundColor: "green",
-        padding:"50px 200px"
+        padding: "50px 200px"
     },
     leftBlogHead: {
         display: "flex",
@@ -174,21 +185,41 @@ const styles = {
         width: "100%",
         paddingLeft: "10px"
     },
-    
-    // Blogs---------------------------------------------
-    blogs:{
-        padding:"10px 80px",
 
+    // Blog buttons to view by category---------------------------------------------
+    blogContent: {
+        padding: "10px 80px",
     },
-    buttonSpace:{
+    buttonSpace: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        width: "50%"
+    },
+    categoryBtn: {
+        padding: "6px",
+        border: 0,
+        borderRadius: "4px"
+    },
+
+    // Blogs --------------------------------------------------------------------
+    blogs:{
+        display:"flex",
+        flexDirection:"column",
+        justifyContent:"center",
+        alignItems:"center",
+        width:"100%",
+    },
+    blogRow:{
         display:"flex",
         justifyContent:"space-between",
-        alignItems:"flex-start",
-        width:"50%"
+        alignItems:"center",
+        width:"100%",
+        padding:"20px 20px 20px 0"
     },
-    categoryBtn:{
-        padding:"6px",
-        border:0,
-        borderRadius:"4px"
+    blog:{
+        backgroundColor:"green",
+        width:"45%",
+        height:"200px",
     }
 }
