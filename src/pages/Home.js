@@ -16,11 +16,11 @@ function Home() {
                 <div style={styles.headerStack}>
                     <div>Home</div>
                     <div style={styles.pr_re}>
-                        Product
+                        Create Blog
                         <BiChevronDown fill={"#475467"} />
                     </div>
                     <div style={styles.pr_re}>
-                        Resources
+                        Search Blog
                         <BiChevronDown fill={"#475467"} />
                     </div>
                     <div>Pricing</div>
@@ -59,11 +59,11 @@ function Home() {
             {/* Blogs */}
             <div style={styles.blogs}>
                 <div style={styles.buttonSpace}>
-                    <button style={styles.categoryBtn}>View All</button>
-                    <button style={styles.categoryBtn}>Design</button>
-                    <button style={styles.categoryBtn}>Product</button>
-                    <button style={styles.categoryBtn}>Software Development</button>
-                    <button style={styles.categoryBtn}>Customer Services</button>
+                    <button style={styles.categoryBtn} className="btnP">View All</button>
+                    <button style={styles.categoryBtn} className="btnP">Design</button>
+                    <button style={styles.categoryBtn} className="btnP">Product</button>
+                    <button style={styles.categoryBtn} className="btnP">Software Development</button>
+                    <button style={styles.categoryBtn} className="btnP">Customer Services</button>
                 </div>
                 <div></div>
                 <div></div>
@@ -121,7 +121,7 @@ const styles = {
         border: "0",
     },
     signup: {
-        width: "95px",
+        width: "100px",
         height: "44px",
         fontFamily: 'Inter',
         fonStyle: "normal",
@@ -157,7 +157,7 @@ const styles = {
     },
     supportingText: {
         // width: "384px",
-        width: "30%",
+        width: "35%",
         height: "90px",
         fontSize: "20px",
         // backgroundColor: "yellow"
@@ -187,8 +187,8 @@ const styles = {
         width:"50%"
     },
     categoryBtn:{
-        backgroundColor:"white",
+        padding:"6px",
         border:0,
-        color:"#96a3b6",
+        borderRadius:"4px"
     }
 }

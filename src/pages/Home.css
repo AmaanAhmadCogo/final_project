@@ -1,0 +1,8 @@
+.btnP{
+    background-color: white;
+    color:#96a3b6,
+}
+.btnP:focus{
+    background-color: #e0d5f6;
+    color:#7F56D9;
+}
