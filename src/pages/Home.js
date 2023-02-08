@@ -144,84 +144,84 @@ function Home() {
                         // : <h2>Data Loading....</h2>}
                         :
                         <>
-                        <div className='blogRow'>
-                        <div className='blog'>
-                            <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
-                            <div className='blogContent'>
-                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
-                                <p>Blog 1</p>
-                                <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
-                                <div>
-                                    <h6>Blogger's Name</h6>
-                                    <h6>Publishing Date</h6>
+                            <div className='blogRow'>
+                                <Link to={"/blog"} className='blog'>
+                                    <div className='blogImageDiv' ><img className='blogImage' src="https://images.pexels.com/photos/7034439/pexels-photo-7034439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" /></div>
+                                    <div className='blogContent'>
+                                        <h6 style={{ color: "#7F56D9" }}>Design</h6>
+                                        <p>UX Review</p>
+                                        <h5>How do you create compelling presentations..</h5>
+                                        <div>
+                                            <h6>Olivia Ryukli</h6>
+                                            <h6>20 Jan 2022</h6>
+                                        </div>
+                                    </div>
+                                </Link>
+                                <div className='blog'>
+                                    <div className='blogImageDiv' ><img className='blogImage' src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/resources/content/images/size/w600/2023/02/mathieu-stern-1zO4O3Z0UJA-unsplash--1-.jpg" /></div>
+                                    <div className='blogContent'>
+                                        <h6 style={{ color: "#7F56D9" }}>Stocks</h6>
+                                        <p>How to Monetize your Content</p>
+                                        <h5>In this article, we will explore how creators can..</h5>
+                                        <div>
+                                            <h6>Tamilore Olapid</h6>
+                                            <h6>22 March 2022</h6>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className='blog'>
-                            <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
-                            <div className='blogContent'>
-                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
-                                <p>Blog 2</p>
-                                <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
-                                <div>
-                                    <h6>Blogger's Name</h6>
-                                    <h6>Publishing Date</h6>
+                            <div className='blogRow'>
+                                <div className='blog'>
+                                    <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
+                                    <div className='blogContent'>
+                                        <h6 style={{ color: "#7F56D9" }}>Jobs</h6>
+                                        <p>Workspace Effects</p>
+                                        <h5>Workspace effects on the daily life..</h5>
+                                        <div>
+                                            <h6>Ryan Shenlong</h6>
+                                            <h6>16 March 2022</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='blog'>
+                                    <div className='blogImageDiv' ><img className='blogImage' src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/resources/content/images/size/w600/2023/01/OG-image.jpg" /></div>
+                                    <div className='blogContent'>
+                                        <h6 style={{ color: "#7F56D9" }}>Design</h6>
+                                        <p>Introducing Buffer to Madstone</p>
+                                        <h5>Today we are rolling out support for Mastodon scheduling..</h5>
+                                        <div>
+                                            <h6>Mike Eckinsht</h6>
+                                            <h6>16 July 2022</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div className='blogRow'>
+                                <div className='blog'>
+                                    <div className='blogImageDiv' ><img className='blogImage' src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/resources/content/images/size/w600/2023/02/pexels-adi-perets-9217119-2.jpg" /></div>
+                                    <div className='blogContent'>
+                                        <h6 style={{ color: "#7F56D9" }}>Publications</h6>
+                                        <p>Spotlighting Culture</p>
+                                        <h5>At Buffer, we regularly share cultural spotlights..</h5>
+                                        <div>
+                                            <h6>Cherryl Alpah</h6>
+                                            <h6>6 Feb 2023</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='blog'>
+                                    <div className='blogImageDiv' ><img className='blogImage' src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/resources/content/images/size/w1200/2023/01/chris-barbalis-Vvvl-mbboKk-unsplash--1-.jpg" /></div>
+                                    <div className='blogContent'>
+                                        <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
+                                        <p>Social Media Security</p>
+                                        <h5>In this article featuring expert advice, we explore the potential...</h5>
+                                        <div>
+                                            <h6>Tamilore Orson</h6>
+                                            <h6>28 Nov 2022</h6>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className='blogRow'>
-                        <div className='blog'>
-                            <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
-                            <div className='blogContent'>
-                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
-                                <p>Blog 3</p>
-                                <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
-                                <div>
-                                    <h6>Blogger's Name</h6>
-                                    <h6>Publishing Date</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='blog'>
-                            <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
-                            <div className='blogContent'>
-                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
-                                <p>Blog 4</p>
-                                <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
-                                <div>
-                                    <h6>Blogger's Name</h6>
-                                    <h6>Publishing Date</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div><div className='blogRow'>
-                        <div className='blog'>
-                            <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
-                            <div className='blogContent'>
-                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
-                                <p>Blog 5</p>
-                                <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
-                                <div>
-                                    <h6>Blogger's Name</h6>
-                                    <h6>Publishing Date</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='blog'>
-                            <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
-                            <div className='blogContent'>
-                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
-                                <p>Blog 6</p>
-                                <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
-                                <div>
-                                    <h6>Blogger's Name</h6>
-                                    <h6>Publishing Date</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </>
+                        </>
                     }
                 </div>
             </div>
