@@ -1,12 +1,11 @@
 import React from 'react'
-
-import { BiChevronDown } from "react-icons/bi";
-import { useParams } from 'react-router-dom'
-
-import { Link } from 'react-router-dom';
+import { useParams, Link} from 'react-router-dom'
 
 import { IoMdOptions } from "react-icons/io";
+import { BiChevronDown } from "react-icons/bi";
 
+
+import './Home.css'
 import './Details.css'
 
 function Details() {
@@ -26,7 +25,7 @@ function Details() {
                     <div><p style={{ fontWeight: "bold", fontSize: "20px" }}>BlogStar</p></div>
                 </div>
                 <div className='headerStack'>
-                    <div>Home</div>
+                    <Link to={'/'} style={{ textDecoration: 'none' }}>Home</Link>
                     <div className='pr_re'>
                         Create Blog
                         <BiChevronDown fill={"#475467"} />

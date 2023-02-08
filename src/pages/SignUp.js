@@ -1,48 +1,29 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import axios from "axios";
+import React from 'react'
+import { useParams, Link } from 'react-router-dom'
 
+import { IoMdOptions } from "react-icons/io";
 import { BiChevronDown } from "react-icons/bi";
-import { useParams } from 'react-router-dom';
 
-// import './Signup.css';
+import './Login.css'
+import './Home.css'
 
 function SignUp() {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    console.log({ email, password })
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    }
+    const param = useParams();
+    const signup = "signup";
+    const login = "login";
 
-    const handlePassword = (e) => {
-        setPassword(e.target.value)
-    }
-
-    const handleApi = () => {
-        console.log({ email, password })
-        axios.post('https://reqres.in/api/login', {
-            email: email,
-            password: password
-        }).then(result => {
-            console.log(result.data)
-            alert('success')
-        })
-            .catch(error => {
-                alert('service error')
-                console.log(error)
-            })
-    }
+    console.log("welcome to sign up page")
 
     return (
         <>
+            {/* header */}
             <div className='header'>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
                     <div className='logo'><img style={{ width: "40px" }} src="https://cdn0.iconfinder.com/data/icons/social-networks-and-media-flat-icons/136/Social_Media_Socialmedia_network_share_socialnetwork_network-22-512.png" /></div>
                     <div><p style={{ fontWeight: "bold", fontSize: "20px" }}>BlogStar</p></div>
                 </div>
                 <div className='headerStack'>
-                    <div>Home</div>
+                    <Link to={'/'} style={{ textDecoration: 'none' }}>Home</Link>
                     <div className='pr_re'>
                         Create Blog
                         <BiChevronDown fill={"#475467"} />
@@ -54,20 +35,50 @@ function SignUp() {
                     <div>Pricing</div>
                 </div>
                 <div className='log'>
-                    <button className='login'>Log in</button>
-                    <button className='signup'>Sign up</button>
+                    <Link to={'/login'}>
+                        <button className='login'>Log in</button>
+                    </Link>
+                    <Link to={'/signup'}>
+                        <button className='signup'>Sign up</button>
+                    </Link>
+                </div>
+
+                <div className='headerOption'>
+                    <IoMdOptions size={25} />
                 </div>
             </div>
-            
-            <div>
-                <div className="App">
-                    Email : <input value={email} onChange={handleEmail} type="text" /> <br />
-                    Password : <input value={password} onChange={handlePassword} type="text" /> <br />
-                    <button onClick={handleApi} >Login</button>
+
+            {/* loginBox */}
+            <div className='loginMain'>
+                <div className='loginBox'>
+                    <div className='logo'><img style={{ width: "60px" }} src="https://cdn0.iconfinder.com/data/icons/social-networks-and-media-flat-icons/136/Social_Media_Socialmedia_network_share_socialnetwork_network-22-512.png" /></div>
+                    <div className='login-heading'><h1>Sign Up</h1></div>
+                    <div style={{ color: "#475467" }}><h6>Start your 30 days free trial.</h6></div>
+                    <div>
+                        <h6 style={{ padding: "0 0 2px 6px" }}>Name:</h6>
+                        <input className='email-input' placeholder='Enter your full name' />
+                    </div>
+                    <div>
+                        <h6 style={{ padding: "0 0 2px 6px" }}>Email:</h6>
+                        <input className='email-input' placeholder='Enter your email' />
+                    </div>
+                    <div>
+                        <h6 style={{ padding: "0 0 2px 6px" }}>Password:</h6>
+                        <input className='email-input' placeholder='Enter your password' />
+                        <h6 style={{ padding: "0 0 0 8px", color: "#475467" }}>Must be atleast 8 characters* </h6>
+                    </div>
+                    <Link to={"/Profile"} className='login-log'>
+                        <button className='login-signin'>Get Started</button>
+                    </Link>
+                    <div className='login-account'>
+                        <h6>Already have an account? &nbsp; </h6>
+                        <Link to={'/login'} className='SignupBox'><h6>Log in</h6></Link>
+                    </div>
                 </div>
             </div>
         </>
-    );
+    )
 }
+
 
 export default SignUp;

@@ -212,9 +212,11 @@
 /* // Blogs -------------------------------------------------------------------- */
 .blogs {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 20px;
     width: 100%;
 }
 
@@ -229,19 +231,21 @@
 .blog {
     display: flex;
     justify-content: flex-start;
-    /* // alignItems:flex-start; */
-    /* background-color: green; */
     width: 48%;
     height: 200px;
+    text-decoration: none;
+    padding: 20px 120px 30px 0;
 }
 
 .blogImageDiv {
-    width: 100%;
+    width: 90%;
 }
 
 .blogImage {
-    width: 320px;
-    height: 200px;
+    /* width: 320px; */
+    width:80%;
+    height: auto;
+    /* height: 200px; */
     object-fit: contain;
 }
 
@@ -266,7 +270,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 0 10px 15px;
+    height: 100%;
+    padding: 0;
 }
 
 .bloggerInfo {}

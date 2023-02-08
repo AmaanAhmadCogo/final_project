@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Details from "./pages/Details";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import Create from "./pages/Create";
+import Profile from "./pages/Profile";
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
         <Route path="/blog" element={<Details />} />
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/create" element={<Create/>}/>
+        <Route path="/Profile" element={<Profile/>}/>
           {/* <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} /> */}
