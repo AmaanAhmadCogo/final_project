@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css';
 
-import { BiChevronDown } from "react-icons/bi"
+import { BiChevronDown } from "react-icons/bi";
+import { IoMdOptions } from "react-icons/io";
+
+import { Link } from 'react-router-dom';
 
 function Home() {
+
+    const signup = "signup";
+    const blog = "blog";
+    const login = "login";
+
+    const [search_item, setSearchItem] = useState("");
+
+    const [options, setOptions] = useState([
+        { label: 'View All', val: '' },
+        { label: 'Design', val: 'design' },
+        { label: 'Product', val: 'product' },
+        { label: 'Software', val: 'software' },
+    ]);
 
     return (
         <>
@@ -27,9 +43,17 @@ function Home() {
                     <div>Pricing</div>
                 </div>
                 <div className='log'>
-                    <button className='login'>Log in</button>
-                    <button className='signup'>Sign up</button>
+                    <Link to={"login"}>
+                        <button className='login'>Log in</button>
+                    </Link>
+                    <Link to={"signup"}>
+                        <button className='signup'>Sign up</button>
+                    </Link>
                 </div>
+
+                <Link to={"login"} className='headerOption'>
+                    <IoMdOptions size={25} />
+                </Link>
             </div>
 
             {/*  Stories and Interviews   // blog heading*/}
@@ -38,6 +62,9 @@ function Home() {
                     <div style={{ fontSize: "12px", color: "#7F56D9" }}>Our Blog</div>
                     <div style={{ color: "black" }}><h1>Stories and Interviews</h1></div>
                     <br />
+                    <div className='blogHeadFiller'>
+                        <p>The blog is the best source of information for interviews, tips, guides, industry best practices, and news. Subscribe for updates in your inbox every week. No spam.</p>
+                    </div>
                     <div>
                         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <div>
@@ -69,12 +96,28 @@ function Home() {
                     <button className="btnP">Customer Services</button>
                 </div>
 
+                <div className='btnScrollDiv'>
+                    <select
+                        className='btnScroll'
+                        value={search_item}
+                        onChange={(e) => {
+                            setSearchItem(e.target.value)
+                        }}
+                    // style={{ width: "150px", height: "26px", fontFamily: "Caveat", fontSize: "20px" }}
+                    >
+                        {options.map((option) => (
+                            <option val={option.val}>{option.label}</option>
+                        ))}
+                    </select>
+                </div>
+
                 <div className='blogs'>
                     <div className='blogRow'>
-                        <div className='blog'>
+                        <Link to={"blog"} className='blog'>
+                            {/* <div className='blog'> */}
                             <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
                             <div className='blogContent'>
-                                <h6 style={{color:"#7F56D9"}}>Article Category</h6>
+                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
                                 <p>Blog 1</p>
                                 <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
                                 <div>
@@ -82,11 +125,13 @@ function Home() {
                                     <h6>Publishing Date</h6>
                                 </div>
                             </div>
-                        </div>
+                            {/* </div> */}
+                        </Link>
+
                         <div className='blog'>
                             <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
                             <div className='blogContent'>
-                                <h6 style={{color:"#7F56D9"}}>Article Category</h6>
+                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
                                 <p>Blog 2</p>
                                 <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
                                 <div>
@@ -101,7 +146,7 @@ function Home() {
                         <div className='blog'>
                             <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
                             <div className='blogContent'>
-                                <h6 style={{color:"#7F56D9"}}>Article Category</h6>
+                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
                                 <p>Blog 1</p>
                                 <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
                                 <div>
@@ -113,7 +158,7 @@ function Home() {
                         <div className='blog'>
                             <div className='blogImageDiv' ><img className='blogImage' src="https://studyonline.rmit.edu.au/sites/default/files/RMIT_MHRM_Skyscraper_Article_%232_-Creating_and_Sustaining_a_Positive_Workplace_Culture_Header_0.jpg" /></div>
                             <div className='blogContent'>
-                                <h6 style={{color:"#7F56D9"}}>Article Category</h6>
+                                <h6 style={{ color: "#7F56D9" }}>Article Category</h6>
                                 <p>Blog 2</p>
                                 <h5>lorem hioivhjwoijvwpoijvowivjpqovjpwov</h5>
                                 <div>
