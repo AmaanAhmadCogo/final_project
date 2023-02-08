@@ -56,7 +56,7 @@ function Login() {
                     </div>
                     <div>
                         <h6 style={{padding:"0 0 2px 6px"}}>Password:</h6>
-                        <input className='email-input' placeholder='Enter your password' />
+                        <input className='email-input' type="password" placeholder='Enter your password' />
                     </div>
                     <div className='login-log'>
                         <button className='login-signin'>Sign in</button>
