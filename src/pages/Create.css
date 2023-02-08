@@ -1,0 +1,29 @@
+.blog-input-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: ce; */
+    height: 600px;
+    padding:20px;
+}
+.blog-input{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+}
+.blog-input-space{
+    height: 40px;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.blog-input-content{
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.submit-btn{
+
+}
